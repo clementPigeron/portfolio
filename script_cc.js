@@ -15,6 +15,10 @@ document.getElementById("otherLine").addEventListener("click", () => {
     selectBot()
 })
 
+document.getElementById("clear").addEventListener("click", () => {
+    clearLines()
+})
+
 
 let digit = document.querySelectorAll(".digit")
 digit.forEach(
@@ -87,4 +91,12 @@ function selectBot() {
     document.getElementById("otherLine").style.border = "1px solid red"
     document.getElementById("baseLine").style.border = "0px"
     positionSelector = 2
+}
+
+function clearLines() {
+    document.getElementById("baseLine").innerHTML = "&nbsp;"
+    document.getElementById("otherLine").innerHTML = "&nbsp;"
+    beginTop = 0
+    beginBot = 0
+    selectTop()
 }
