@@ -2,6 +2,16 @@ let positionSelector = 1
 let beginTop = 0
 let beginBot = 0
 
+const paletteColors = document.querySelectorAll('input[name="paletteColor"]')
+
+for(const radioColor of paletteColors) {
+    radioColor.addEventListener("change", function() {
+        changeStyle(radioColor.value)
+    })
+}
+
+changeStyle("default")
+
 document.getElementById("top").addEventListener("click", () => {
     selectTop()
 })
@@ -18,6 +28,7 @@ document.getElementById("otherLine").addEventListener("click", () => {
 document.getElementById("clear").addEventListener("click", () => {
     clearLines()
 })
+
 
 
 let digit = document.querySelectorAll(".digit")
@@ -99,4 +110,55 @@ function clearLines() {
     beginTop = 0
     beginBot = 0
     selectTop()
+}
+
+function changeStyle(sel) {
+
+    // var style = document.createElement('style');
+    // style.type = 'text/css';
+
+    // if (sel==="default") {
+    //     var cssString =
+    //         '#calculatorBox {    background-color: lightgray;}#baseLine {    border: 1px solid red;}#monitor,#resultBox {    color: white;    background-color: black;}button {    color: #ffffff;    border-top: 2px solid #62b568;    border-right: 3px solid #0e3311;    border-left: 2px solid #62b568;    border-bottom: 4px solid #0e3311;    background-color: #62b568;}'
+    // } else if (sel==="black") {
+    //     var cssString =
+    //         '#calculatorBox {    background-color: black;}#baseLine {    border: 1px solid red;}#monitor,#resultBox {    color: white;    background-color: black;}button {    color: #ffffff;    border-top: 2px solid #62b568;    border-right: 3px solid #0e3311;    border-left: 2px solid #62b568;    border-bottom: 4px solid #0e3311;    background-color: #62b568;}'
+    // }
+    // document.getElementById("paletteStyle").innerHTML = cssString
+
+    if (sel=="default") {
+        console.log("default")
+        document.querySelector("html").style["background-color"] = "white"
+        document.querySelector("header").style["color"] = "black"
+        document.querySelector("#paletteSelector").style["color"] = "black"
+        document.querySelector("#calculatorBox").style["background-color"] = "lightgray"
+        document.querySelector("#baseLine").style["border"] = "1px solid red"
+        document.querySelectorAll(".monitor").forEach((mon) => {
+            mon.style["color"] = "white"
+            mon.style["background-color"] = "black"
+        })
+        document.querySelectorAll("button").forEach((btn) => {
+            btn.style["color"] = "#ffffff"
+            btn.style["border-top"] = "2px solid #62b568"
+            btn.style["border-right"] = "3px solid #0e3311"
+            btn.style["border-left"] = "2px solid #62b568"
+            btn.style["border-bottom"] = "4px solid #0e3311"
+            btn.style["background-color"] = "#62b568"
+        })
+        
+
+    } else if (sel=="black") {
+        console.log("black")
+        document.querySelector("html").style["background-color"] = "black"
+        document.querySelector("header").style["color"] = "white"
+        document.querySelector("#paletteSelector").style["color"] = "white"
+    } else if (sel=="dark") {
+        console.log("dark")
+        document.querySelector("html").style["background-color"] = "DimGray"
+        document.querySelector("header").style["color"] = "white"
+        document.querySelector("#paletteSelector").style["color"] = "white"
+    }
+
+    // style.appendChild(document.createTextNode(cssString));
+    // document.head.appendChild(style);
 }

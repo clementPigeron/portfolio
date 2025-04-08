@@ -5,25 +5,19 @@ header {
 
 #calculatorBox {
     padding: 15px;
-    background-color: lightgray;
     width: 405px;
 }
 
-#monitor {
+#topMonitor {
     width: 400px;
     height: 71px;
     border: 2px solid black;
     margin-bottom: 5px;
 }
 
-#monitor p {
+#topMonitor p {
     margin: 3px;
     width: auto;
-    /*border: 1px solid red;*/
-}
-
-#baseLine {
-    border: 1px solid red;
 }
 
 #resultBox {
@@ -32,11 +26,8 @@ header {
     height: 20px;
 }
 
-#monitor,
-#resultBox {
+.monitor {
     font-family: 'Courier New', Courier, monospace;
-    color: white;
-    background-color: black;
 }
 
 button {
@@ -45,18 +36,12 @@ button {
     justify-content: center;
     line-height: 1;
     text-decoration: none;
-    color: #ffffff;
     font-size: 18px;
     border-radius: 3px;
     padding: 0 15px 0 15px;
     height: 40px;
     font-weight: bold;
-    border-top: 2px solid #62b568;
-    border-right: 3px solid #0e3311;
-    border-left: 2px solid #62b568;
-    border-bottom: 4px solid #0e3311;
     transition: 0.05s;
-    background-color: #62b568;
     margin: 5px 5px 5px 5px;
 }
 
@@ -66,3 +51,31 @@ button:active {
     border-top-width: 0px;
     border-left-width: 0px;
 }
+
+/* PALETTE COMPONNENTS */
+/*
+
+#calculatorBox {
+    background-color: lightgray;
+}
+
+#baseLine {
+    border: 1px solid red;
+}
+
+#monitor,
+#resultBox {
+    color: white;
+    background-color: black;
+}
+
+button {
+    color: #ffffff;
+    border-top: 2px solid #62b568;
+    border-right: 3px solid #0e3311;
+    border-left: 2px solid #62b568;
+    border-bottom: 4px solid #0e3311;
+    background-color: #62b568;
+}
+
+*/

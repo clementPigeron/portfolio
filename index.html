@@ -5,6 +5,7 @@
     <title>CALCULATOR</title>
     <link rel="stylesheet" href="style_cc.css">
     <script src="script_cc.js" defer></script>
+    <style id="paletteStyle"></style>
 </head>
 
 <body>
@@ -12,13 +13,21 @@
         CALCULATOR
     </header>
     <main>
+        <form id="paletteSelector">
+            <input type="radio" name="paletteColor" value="default" checked>
+            <label for="default">default</label>
+            <input type="radio" name="paletteColor" value="black">
+            <label for="black">black</label>
+            <input type="radio" name="paletteColor" value="dark">
+            <label for="dark">dark</label>
+        </form>
         <div id="calculatorBox">
-        <div id="monitor">
+        <div id="topMonitor" class="monitor">
             <p id="baseLine">&nbsp;</p>
             <p id="operatorLine">+</p>
             <p id="otherLine">&nbsp;</p>
         </div>
-        <div id="resultBox">= <span id="result"></span></div>
+        <div id="resultBox" class="monitor">= <span id="result"></span></div>
         <p>
             <button class="operator" id="add">+</button>
             <button class="operator" id="substract">-</button>
