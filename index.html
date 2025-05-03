@@ -5,7 +5,7 @@
     <title>Clément Pigeron</title>
     <link rel="stylesheet" href="style_pf.css">
     <script src="script_pf.js" defer></script>
-    <script type="module" src="https://ajax.googleapis.com/ajax/libs/model-viewer/4.0.0/model-viewer.min.js"></script>
+    <script type="module" src="model-viewer_4.0.0.min.js"></script>
 </head>
 
 <body>
@@ -22,7 +22,7 @@
         <div id="boxContainer">
             <div class="box" id="box1" style="visibility: hidden;">
                 <p>Contenu boîte 1</p>
-                <model-viewer src="./models/Donut_clement_test.glb" ar ar-modes="webxr scene-viewer quick-look"
+                <model-viewer src="./models/Donut_clement_test.glb" ar camera-controls ar-modes="webxr scene-viewer quick-look"
                     tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" autoplay> </model-viewer>
                 <model-viewer src="./models/Donut.glb" ar ar-modes="webxr scene-viewer quick-look"
                     tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" autoplay> </model-viewer>
@@ -34,6 +34,7 @@
             </div>
             <div class="box" id="box3" style="visibility: hidden;">
                 <p>Contenu boîte 3</p>
+                <iframe src="https://clementpigeron.github.io/calculator/"></iframe>
             </div>
             <div class="box" id="box4" style="visibility: hidden;">
                 <p>Contenu boîte 4</p>
