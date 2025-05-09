@@ -63,11 +63,16 @@ button:hover {
     background: linear-gradient(90deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
 }
 
-
-
 .animated {
     animation-name: boxTranslate;
     animation-duration: 0.5s;
+}
+
+#iframeLink:link, #iframeLink:visited {
+    color: purple
+}
+#iframeLink:hover, #iframeLink:active {
+    color: violet
 }
 
 @keyframes boxTranslate {

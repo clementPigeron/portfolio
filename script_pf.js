@@ -2,11 +2,15 @@
 //     selectTop()
 // })
 
-let nav = document.querySelector("nav")
-let navLinks = document.querySelectorAll("nav button")
+const nav = document.querySelector("nav")
+const navLinks = document.querySelectorAll("nav button")
+const iframeLink = document.getElementById("iframeLink")
+const iframeCalc = document.getElementById("iframeCalc")
 let previousBoxNumber = 1
 
-
+iframeLink.addEventListener("click", () => {
+    toggleVisibility(iframeCalc)
+})
 
 navLinks.forEach(
     (link) => {
@@ -29,4 +33,12 @@ function displayBox(boxNumber) {
 
     previousBoxNumber = boxNumber+1
     console.log(previousBoxNumber)
+}
+
+function toggleVisibility (element) {
+    if (element.style.visibility==="hidden") {
+        element.style.visibility = "visible"
+    } else {
+        element.style.visibility = "hidden"
+    }
 }
