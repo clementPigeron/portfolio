@@ -67,9 +67,9 @@ button:hover {
     animation-name: boxTranslate;
     animation-duration: 0.5s;
 }
-
-#iframeLink:link, #iframeLink:visited {
-    color: purple
+#iframeLink {
+    cursor: pointer;
+    color: purple;
 }
 #iframeLink:hover, #iframeLink:active {
     color: violet
