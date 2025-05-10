@@ -1,6 +1,6 @@
 body {
-    background: #faedcd;
-    background: linear-gradient(180deg, #fefae0 0%, #faedcd 100%);
+    background: black;
+    background: black;
 }
 
 iframe {
@@ -9,8 +9,9 @@ iframe {
 }
 
 header {
-    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     text-align: center;
+    color: white;
 }
 
 .container {
@@ -31,7 +32,7 @@ nav {
     background: linear-gradient(270deg, rgba(204, 213, 174, 1) 0%, #ffffff00 100%);
 }
 
-button {
+nav button {
     width: 100%;
     background: none;
     cursor: pointer;
@@ -39,6 +40,7 @@ button {
     transition: all 0.3s ease-out;
     flex: auto;
     font-size: 20px;
+    color: white;
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button:hover {
@@ -55,9 +57,11 @@ button:hover {
     position: absolute;
     /* border: 2px solid green; */
     border-radius: 20px;
+    font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     width: 100%;
     height: 100%;
     opacity: 0;
+    color: white;
     transition: visibility 0s, opacity 0.5s linear;
     background: #E9EDC9;
     background: linear-gradient(90deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -73,6 +77,14 @@ button:hover {
 }
 #iframeLink:hover, #iframeLink:active {
     color: violet
+}
+.imgjam {
+    transition: all 0.8s ease;
+}
+.imgjam:hover {
+    transform: scale(2,2);
+    background-color: rgba(255, 255, 255, 0.475);
+    border-radius: 20px;
 }
 
 @keyframes boxTranslate {
