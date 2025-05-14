@@ -15,7 +15,7 @@ iframeLink.addEventListener("click", () => {
 navLinks.forEach(
     (link) => {
         link.addEventListener("click", () => {
-            displayBox(Array.from(link.parentNode.children).indexOf(link))
+            displayBox(Array.from(link.parentNode.children).indexOf(link)+1)
         })
     }
 )
@@ -26,12 +26,12 @@ function displayBox(boxNumber) {
     previousBox.style.opacity = "0"
     previousBox.classList.remove("animated") 
 
-    let box = document.getElementById(`box${boxNumber+1}`)
+    let box = document.getElementById(`box${boxNumber}`)
     box.style.visibility = "visible"
     box.style.opacity = "1"
     box.classList.add("animated")
 
-    previousBoxNumber = boxNumber+1
+    previousBoxNumber = boxNumber
     console.log(previousBoxNumber)
 }
 

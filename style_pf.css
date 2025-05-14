@@ -1,6 +1,9 @@
+:root {
+    --font-color: black;
+}
+
 body {
-    background: black;
-    background: black;
+    background: rgb(255, 255, 255);
 }
 
 iframe {
@@ -11,7 +14,7 @@ iframe {
 header {
     font-family: 'Gill Sans', 'Gill Sans MT', 'Calibri', 'Trebuchet MS', sans-serif;
     text-align: center;
-    color: white;
+    color: var(--font-color);
 }
 
 .container {
@@ -40,7 +43,7 @@ nav button {
     transition: all 0.3s ease-out;
     flex: auto;
     font-size: 20px;
-    color: white;
+    color: var(--font-color);
     font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
 }
 button:hover {
@@ -61,7 +64,7 @@ button:hover {
     width: 100%;
     height: 100%;
     opacity: 0;
-    color: white;
+    color: var(--font-color);
     transition: visibility 0s, opacity 0.5s linear;
     background: #E9EDC9;
     background: linear-gradient(90deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
