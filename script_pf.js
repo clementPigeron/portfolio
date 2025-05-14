@@ -6,7 +6,7 @@ const nav = document.querySelector("nav")
 const navLinks = document.querySelectorAll("nav button")
 const iframeLink = document.getElementById("iframeLink")
 const iframeCalc = document.getElementById("iframeCalc")
-let previousBoxNumber = 1
+let previousBoxName = false
 
 iframeLink.addEventListener("click", () => {
     toggleVisibility(iframeCalc)
@@ -15,24 +15,27 @@ iframeLink.addEventListener("click", () => {
 navLinks.forEach(
     (link) => {
         link.addEventListener("click", () => {
-            displayBox(Array.from(link.parentNode.children).indexOf(link)+1)
+            const linkid = link.id
+            displayBox(linkid.split("button").pop())
         })
     }
 )
 
-function displayBox(boxNumber) {
-    let previousBox = document.getElementById(`box${previousBoxNumber}`)
-    previousBox.style.visibility = "hidden"
-    previousBox.style.opacity = "0"
-    previousBox.classList.remove("animated") 
-
-    let box = document.getElementById(`box${boxNumber}`)
+function displayBox(boxName) {
+    
+    if (previousBoxName) {
+        let previousBox = document.getElementById(`box${previousBoxName}`)
+        previousBox.style.visibility = "hidden"
+        previousBox.style.opacity = "0"
+        previousBox.classList.remove("animated")
+    }
+    
+    let box = document.getElementById(`box${boxName}`)
     box.style.visibility = "visible"
     box.style.opacity = "1"
     box.classList.add("animated")
 
-    previousBoxNumber = boxNumber
-    console.log(previousBoxNumber)
+    previousBoxName = boxName
 }
 
 function toggleVisibility (element) {

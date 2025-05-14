@@ -14,20 +14,46 @@
     </header>
     <div class="container">
         <nav>
-            <button>Profil</button>
-            <button>TODO List</button>
-            <button>Calculatrice</button>
-            <button>Loisirs</button>
-            <button>tests 3D</button>
+            <button id="buttonProfil"><span class="buttonText">Profil</span></button>
+            <button id="buttonBoucbook"><span class="buttonText">BoucBook</span></button>
+            <button id="buttonTodo"><span class="buttonText">TODO List</span></button>
+            <button id="buttonCalculator"><span class="buttonText">Calculatrice</span></button>
+            <button id="buttonLoisirs"><span class="buttonText">Loisirs</span></button>
+            <button id="buttonTests3d"><span class="buttonText">tests 3D</span></button>
         </nav>
         <div id="boxContainer">
-            <div class="box" id="box1" style="visibility: hidden;">
-                <p>Mon profil, photo, CV (à télécharger ?)</p>
+            <div class="box" id="boxProfil" style="visibility: hidden;">
+                <img src="./pictures/PP_rt.jpg" id="ppImg">
+                <p>
+                    Mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais
+                    désormais appliquer au domaine du développement web, afin de concevoir une navigation moderne et
+                    ergonomique pour optimiser l'expérience utilisateur.
+                <ul>
+                    <li>Disponible pour une prise de poste en apprentissage à partir de septembre (possible dès juin)
+                    </li>
+                    <li>Rythme d'alternance : 3 semaines en entreprise / 1 semaine en formation en moyenne</li>
+                </ul>
+                </p>
             </div>
-            <div class="box" id="box2" style="visibility: hidden;">
+            <div class="box" id="boxBoucbook" style="visibility: hidden;">
+                <h2>BoucBook</h2>
+                <p>
+                    <a href="https://clementpigeron.github.io/booking/" target="_blank">BoucBook</a> est un faux site de
+                    reservation de châlet.<br><br>
+                    Notions importantes :
+                </p>
+                <ul>
+                    <li>Boutons</li>
+                    <li>Animations</li>
+                    <li>Filtres</li>
+                </ul>
+                <p>En chantier : <i>version mobile responsive</i></p>
+            </div>
+            <div class="box" id="boxTodo" style="visibility: hidden;">
                 <h2>TODO List</h2>
                 <p>
-                    <a href="https://clementpigeron.github.io/todo/" target="_blank">Une application</a> permettant de créer un nombre illimité de tâches et de rattacher une note personnalisées à chacune.<br><br>
+                    <a href="https://clementpigeron.github.io/todo/" target="_blank">Une application</a> permettant de
+                    créer un nombre illimité de tâches et de rattacher une note personnalisées à chacune.<br><br>
                     Notions importantes :
                 </p>
                 <ul>
@@ -36,12 +62,13 @@
                     <li>Zones de texte</li>
                     <li>Grid</li>
                 </ul>
-                <p>En chantier : <i>persistance des données</i></p>
+                <p>En chantier : <i>persistance des données, version mobile responsive</i></p>
             </div>
-            <div class="box" id="box3" style="visibility: hidden;">
+            <div class="box" id="boxCalculator" style="visibility: hidden;">
                 <h2>Calculatrice</h2>
                 <p>
-                    <a href="https://clementpigeron.github.io/calculator/" target="_blank">Une application</a> contenant une calculatrice basique avec la possibilité de changer de thème graphique.<br><br>
+                    <a href="https://clementpigeron.github.io/calculator/" target="_blank">Une application</a> contenant
+                    une calculatrice basique avec la possibilité de changer de thème graphique.<br><br>
                     Notions importantes :
                 </p>
                 <ul>
@@ -49,18 +76,22 @@
                     <li>Calculs</li>
                     <li>Manipulations CSS</li>
                 </ul>
-                <p>En chantier : <i>ajouter des thèmes (palette dynamique ?), calculs plus complexes</i></p>
+                <p>En chantier : <i>ajouter des thèmes (palette dynamique ?), calculs plus complexes, version mobile
+                        responsive</i></p>
                 <p><a id="iframeLink"><i>aperçu</i></a></p>
-                <iframe id="iframeCalc" src="https://clementpigeron.github.io/calculator/" style="visibility: hidden;"></iframe>
+                <iframe id="iframeCalc" src="https://clementpigeron.github.io/calculator/"
+                    style="visibility: hidden;"></iframe>
             </div>
-            <div class="box" id="box4" style="visibility: hidden;">
-                <p>GAME JAM : <a href="https://itch.io/jam/boss-rush-jam-2025" target="_blank">Boss Rush Jam 2025</a></p>
-                <p>Graphismes réalisés pour le jeu <a href="https://pigm0.itch.io/clock-is-spinning" target="_blank">clock is
+            <div class="box" id="boxLoisirs" style="visibility: hidden;">
+                <p>GAME JAM : <a href="https://itch.io/jam/boss-rush-jam-2025" target="_blank">Boss Rush Jam 2025</a>
+                </p>
+                <p>Graphismes réalisés pour le jeu <a href="https://pigm0.itch.io/clock-is-spinning"
+                        target="_blank">clock is
                         spinning</a> sous le pseudonyme "Soul".</p>
-                <p><img src="./pictures/GJ1_carrot_OL_big.gif" class="imgjam"><img src="./pictures/GJ1_glasses_big.gif" class="imgjam"><img
-                        src="./pictures/GJ1_printer.gif" class="imgjam"></p>
+                <p><img src="./pictures/GJ1_carrot_OL_big.gif" class="imgjam"><img src="./pictures/GJ1_glasses_big.gif"
+                        class="imgjam"><img src="./pictures/GJ1_printer.gif" class="imgjam"></p>
             </div>
-            <div class="box" id="box5" style="visibility: hidden;">
+            <div class="box" id="boxTests3d" style="visibility: hidden;">
                 <p>Contenu boîte 5</p>
                 <model-viewer src="./models/Donut_clement_test.glb" ar camera-controls
                     ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp"
