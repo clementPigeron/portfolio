@@ -150,4 +150,12 @@ nav button:hover .buttonText {
     .box {
         background: linear-gradient(180deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
     }
+    #jamImgs {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #jamImgs img {
+        width: 50%;
+    }
 }
