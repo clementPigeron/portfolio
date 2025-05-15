@@ -73,6 +73,7 @@ nav button:hover .buttonText {
 #boxContainer {
     width: 80%;
     position: relative;
+    overflow: hidden;
 }
 
 .box {
@@ -81,6 +82,7 @@ nav button:hover .buttonText {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding: 10px;
     height: 100%;
+    box-sizing: border-box;
     opacity: 0;
     color: var(--font-color);
     transition: visibility 0s, opacity 0.5s linear;
@@ -151,6 +153,7 @@ nav button:hover .buttonText {
     }
     .box {
         background: linear-gradient(180deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
+        width: 100%;
     }
     #jamImgs {
         display: flex;
@@ -160,4 +163,14 @@ nav button:hover .buttonText {
     #jamImgs img {
         width: 50%;
     }
+
+    @keyframes boxTranslate {
+    from {
+        transform: translateY(50px);
+    }
+
+    to {
+        transform: translateY(0px);
+    }
+}
 }
