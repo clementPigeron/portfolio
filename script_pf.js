@@ -39,9 +39,9 @@ function displayBox(boxName) {
 }
 
 function toggleVisibility (element) {
-    if (element.style.visibility==="hidden") {
-        element.style.visibility = "visible"
+    if (element.style.display==="none") {
+        element.style.display = "inline"
     } else {
-        element.style.visibility = "hidden"
+        element.style.display = "none"
     }
 }
