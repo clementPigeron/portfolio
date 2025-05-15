@@ -4,13 +4,13 @@
 
 const nav = document.querySelector("nav")
 const navLinks = document.querySelectorAll("nav button")
-const iframeLink = document.getElementById("iframeLink")
-const iframeCalc = document.getElementById("iframeCalc")
+// const iframeLink = document.getElementById("iframeLink")
+// const iframeCalc = document.getElementById("iframeCalc")
 let previousBoxName = false
 
-iframeLink.addEventListener("click", () => {
-    toggleVisibility(iframeCalc)
-})
+// iframeLink.addEventListener("click", () => {
+//     toggleVisibility(iframeCalc)
+// })
 
 navLinks.forEach(
     (link) => {
@@ -22,16 +22,21 @@ navLinks.forEach(
 )
 
 function displayBox(boxName) {
-    
+    const boxContainer = document.getElementById("boxContainer")
+
+    if (boxContainer.style.display==="none") {
+        boxContainer.style.display = "flex"
+    }
+
     if (previousBoxName) {
         let previousBox = document.getElementById(`box${previousBoxName}`)
-        previousBox.style.visibility = "hidden"
+        previousBox.style.display = "none"
         previousBox.style.opacity = "0"
         previousBox.classList.remove("animated")
     }
     
     let box = document.getElementById(`box${boxName}`)
-    box.style.visibility = "visible"
+    box.style.display = "block"
     box.style.opacity = "1"
     box.classList.add("animated")
 

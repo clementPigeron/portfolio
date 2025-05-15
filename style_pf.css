@@ -21,6 +21,7 @@ header {
 
 .container {
     display: flex;
+    overflow: hidden;
     /* grid-template-columns: 2fr 8fr 1fr;
     grid-column-gap: 20px;
     grid-template-rows: 400px; */
@@ -72,16 +73,16 @@ nav button:hover .buttonText {
 
 #boxContainer {
     width: 80%;
-    position: relative;
+    display: flex;
     overflow: hidden;
 }
 
 .box {
+    display: block;
     position: absolute;
     border-radius: 20px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding: 10px;
-    height: 100%;
     box-sizing: border-box;
     opacity: 0;
     color: var(--font-color);
@@ -148,8 +149,8 @@ nav button:hover .buttonText {
         height: auto;
     }
     #boxContainer {
+        display: flex;
         width: 100%;
-        height: 400px;
     }
     .box {
         background: linear-gradient(180deg, rgba(233, 237, 201, 1) 0%, rgba(255, 255, 255, 0) 100%);
@@ -161,7 +162,8 @@ nav button:hover .buttonText {
         align-items: center;
     }
     #jamImgs img {
-        width: 50%;
+        width: 30%;
+        margin: 20px 0 20px 0;
     }
 
     @keyframes boxTranslate {

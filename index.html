@@ -22,8 +22,8 @@
             <button id="buttonLoisirs"><span class="buttonText">Loisirs</span></button>
             <!-- <button id="buttonTests3d"><span class="buttonText">tests 3D</span></button> -->
         </nav>
-        <div id="boxContainer">
-            <div class="box" id="boxProfil" style="visibility: hidden;">
+        <div id="boxContainer" style="display: none;">
+            <div class="box" id="boxProfil" style="display:none">
                 <img src="./pictures/PP_rt.jpg" id="ppImg">
                 <p>
                     Mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais
@@ -36,7 +36,7 @@
                 </ul>
                 </p>
             </div>
-            <div class="box" id="boxBoucbook" style="visibility: hidden;">
+            <div class="box" id="boxBoucbook" style="display:none">
                 <h2>BoucBook</h2>
                 <p>
                     <a href="https://clementpigeron.github.io/booking/" target="_blank">BoucBook</a> est un faux site de
@@ -50,7 +50,7 @@
                 </ul>
                 <p>En chantier : <i>version mobile responsive</i></p>
             </div>
-            <div class="box" id="boxTodo" style="visibility: hidden;">
+            <div class="box" id="boxTodo" style="display:none">
                 <h2>TODO List</h2>
                 <p>
                     <a href="https://clementpigeron.github.io/todo/" target="_blank">Une application</a> permettant de
@@ -65,7 +65,7 @@
                 </ul>
                 <p>En chantier : <i>persistance des données, version mobile responsive</i></p>
             </div>
-            <div class="box" id="boxCalculator" style="visibility: hidden;">
+            <div class="box" id="boxCalculator" style="display:none">
                 <h2>Calculatrice</h2>
                 <p>
                     <a href="https://clementpigeron.github.io/calculator/" target="_blank">Une application</a> contenant
@@ -79,11 +79,11 @@
                 </ul>
                 <p>En chantier : <i>ajouter des thèmes (palette dynamique ?), calculs plus complexes, version mobile
                         responsive</i></p>
-                <p><a id="iframeLink"><i>aperçu</i></a></p>
+                <!-- <p><a id="iframeLink"><i>aperçu</i></a></p>
                 <iframe id="iframeCalc" src="https://clementpigeron.github.io/calculator/"
-                    style="display: none;"></iframe>
+                    style="display: none;"></iframe> -->
             </div>
-            <div class="box" id="boxLoisirs" style="visibility: hidden;">
+            <div class="box" id="boxLoisirs" style="display:none">
                 <p>GAME JAM : <a href="https://itch.io/jam/boss-rush-jam-2025" target="_blank">Boss Rush Jam 2025</a>
                 </p>
                 <p>Graphismes réalisés pour le jeu <a href="https://pigm0.itch.io/clock-is-spinning"
@@ -92,7 +92,7 @@
                 <p id="jamImgs"><img src="./pictures/GJ1_carrot_OL_big.gif" class="imgjam"><img src="./pictures/GJ1_glasses_big.gif"
                         class="imgjam"><img src="./pictures/GJ1_printer.gif" class="imgjam"></p>
             </div>
-            <div class="box" id="boxTests3d" style="visibility: hidden;">
+            <div class="box" id="boxTests3d" style="display:none">
                 <p>Contenu boîte 5</p>
                 <model-viewer src="./models/Donut_clement_test.glb" ar camera-controls
                     ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp"
