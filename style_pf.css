@@ -143,6 +143,7 @@ nav button:hover .buttonText {
         height: 400px;
         margin-bottom: 3%;
         background-color: var(--globalColor);
+        border-radius: 0;
     }
     .container {
         flex-wrap: wrap;
