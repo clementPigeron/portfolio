@@ -105,6 +105,11 @@ nav button:hover .buttonText {
     display: block;
     margin: auto;
 }
+#boucbookImg {
+    height: 80px;
+    display: block;
+    margin: auto;
+}
 
 #iframeLink {
     cursor: pointer;
