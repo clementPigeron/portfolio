@@ -4,9 +4,24 @@
     --globalColor: #dfb2f4;
 }
 
-body {
-    background: rgb(255, 255, 255);
+html {
+    overflow: auto;
+}
+
+html, body {
+    height: 100%;
     margin: 0;
+    padding: 0;
+}
+
+body {
+	background-image: url("./pictures/fond_violet.jpg");
+	background-size: cover;
+	background-repeat: no-repeat;
+    overflow: auto;
+    backdrop-filter: blur(5px) ;
+    background-color: rgba(255,255,255,0.4);
+    background-blend-mode: lighten;
 }
 
 iframe {
@@ -75,12 +90,11 @@ nav button:hover .buttonText {
 #boxContainer {
     width: 80%;
     display: flex;
-    overflow: hidden;
 }
 
 .box {
     display: block;
-    position: absolute;
+    /* position: absolute; */
     border-radius: 20px;
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding: 10px;
@@ -151,7 +165,7 @@ nav button:hover .buttonText {
         border-radius: 0;
     }
     .container {
-        flex-wrap: wrap;
+        flex-direction: column;
         height: auto;
     }
     #boxContainer {
