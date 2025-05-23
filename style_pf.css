@@ -179,6 +179,9 @@ nav button:hover .buttonText {
 }
 
 @media (max-width:800px) {
+    html, body {
+        height: 100svh;
+    }
     nav {
         width: 100%;
         margin: 0;
