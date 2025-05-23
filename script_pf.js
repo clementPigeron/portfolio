@@ -6,7 +6,7 @@ const nav = document.querySelector("nav")
 const navLinks = document.querySelectorAll("nav button")
 // const iframeLink = document.getElementById("iframeLink")
 // const iframeCalc = document.getElementById("iframeCalc")
-let previousBoxName = false
+let previousBoxName = "Profil"
 
 // iframeLink.addEventListener("click", () => {
 //     toggleVisibility(iframeCalc)

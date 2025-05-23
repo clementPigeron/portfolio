@@ -98,7 +98,7 @@ nav button:hover .buttonText {
     font-family: "Century Gothic", CenturyGothic, AppleGothic, sans-serif;
     padding: 10px;
     box-sizing: border-box;
-    opacity: 0;
+    opacity: 1;
     color: var(--font-color);
     transition: visibility 0s, opacity 0.5s linear;
     background: linear-gradient(90deg, var(--globalColor) 0%, rgba(255, 255, 255, 0) 100%);
