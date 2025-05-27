@@ -24,8 +24,8 @@ navLinks.forEach(
 const viewer = document.querySelector('#caliperModel');
 
 // Valeur maximale et minimale de l'angle en degrés
-const minAngle = -180;
-const maxAngle = 180;
+const minAngle = -90;
+const maxAngle = 90;
 
 document.body.addEventListener('scroll', () => {
     console.log("scroll")
