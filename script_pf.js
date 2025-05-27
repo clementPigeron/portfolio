@@ -23,31 +23,26 @@ navLinks.forEach(
 
 const viewer = document.querySelector('#caliperModel');
 
-// Valeur maximale et minimale de l'angle en degrés
 const minAngle = -90;
 const maxAngle = 90;
 
 document.body.addEventListener('scroll', () => {
     console.log("scroll")
-// Calculer un ratio de scroll (0 en haut, 1 en bas)
-const scrollTop = document.body.scrollTop;
-const docHeight = document.body.scrollHeight - document.body.clientHeight;
-const scrollRatio = scrollTop / docHeight;
 
-// Calculer l'angle Y en fonction du scroll
-const angleY = minAngle + scrollRatio * (maxAngle - minAngle);
+    const scrollTop = document.body.scrollTop;
+    const docHeight = document.body.scrollHeight - document.body.clientHeight;
+    const scrollRatio = scrollTop / docHeight;
 
-// Récupérer la valeur actuelle de la camera-orbit (azimuth, elevation, distance)
-// On garde elevation et distance fixes
-const currentOrbit = viewer.getCameraOrbit();
-// currentOrbit est un objet {theta, phi, radius} en radians/meters
-// On remplace theta par angleY converti en radians
-const theta = angleY * Math.PI / 180;
-const phi = currentOrbit.phi;
-const radius = currentOrbit.radius;
+    const angleY = minAngle + scrollRatio * (maxAngle - minAngle);
 
-viewer.cameraOrbit = `${theta}rad ${phi}rad ${radius}m`;
-viewer.jumpCameraToGoal(); // Appliquer immédiatement la nouvelle position
+    const currentOrbit = viewer.getCameraOrbit();
+
+    const theta = angleY * Math.PI / 180;
+    const phi = currentOrbit.phi;
+    const radius = currentOrbit.radius;
+
+    viewer.cameraOrbit = `${theta}rad ${phi}rad ${radius}m`;
+    viewer.jumpCameraToGoal();
 });
 
 function displayBox(boxName) {

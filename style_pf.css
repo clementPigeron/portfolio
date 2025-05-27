@@ -152,8 +152,9 @@ nav button:hover .buttonText {
     display: block;
     width: 100%;
     height: 300px;
-    border: 2px solid black;
+    /* border: 2px solid black; */
     border-radius: 50%;
+    float: left;
 }
 
 #experienceUtilisateur {
