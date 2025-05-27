@@ -133,6 +133,11 @@ nav button:hover .buttonText {
     animation-duration: 0.5s;
 }
 
+#boxProfil {
+    font-size: larger;
+    line-height: 2;
+}
+
 #ppImg {
     width: 150px;
     height: 150px;
@@ -142,6 +147,24 @@ nav button:hover .buttonText {
     display: block;
     margin: auto;
 }
+
+#caliperModel {
+    display: block;
+    width: 100%;
+    height: 300px;
+    border: 2px solid black;
+    border-radius: 50%;
+}
+
+#experienceUtilisateur {
+    display: flex;
+    align-items: center;
+}
+
+#experienceUtilisateur p {
+    text-align: justify;
+}
+
 #boucbookImg {
     height: 80px;
     display: block;
