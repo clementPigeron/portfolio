@@ -230,6 +230,9 @@ nav button:hover .buttonText {
     .story {
         flex-direction: column;
     }
+    #design {
+        flex-direction: column-reverse;
+    }
     #jamImgs {
         display: flex;
         flex-direction: column;
