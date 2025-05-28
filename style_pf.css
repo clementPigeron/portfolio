@@ -148,6 +148,32 @@ nav button:hover .buttonText {
     margin: auto;
 }
 
+#titleDev {
+    text-align: center;
+    position: relative;
+    font-weight: 500;
+    font-size: 50px;
+    z-index: 1;
+}
+
+#titleDev::before {
+    content: "";
+    background:linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    height: 200px;
+    width: 200px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    z-index: 0;
+    transform: translate(-50%, -50%);
+}
+
+#titleDev span {
+    position: relative;
+    z-index: 1;
+}
+
 .caliperModel {
     display: block;
     width: 300px;
