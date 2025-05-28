@@ -148,22 +148,24 @@ nav button:hover .buttonText {
     margin: auto;
 }
 
-#caliperModel {
+.caliperModel {
     display: block;
-    width: 100%;
+    width: 300px;
     height: 300px;
-    /* border: 2px solid black; */
-    border-radius: 50%;
-    float: left;
+    flex-shrink: 0;
 }
 
-#experienceUtilisateur {
+#paint {
+    margin-left: 15px;
+}
+
+.story {
     display: flex;
     align-items: center;
 }
 
-#experienceUtilisateur p {
-    text-align: justify;
+.story p {
+    text-align: center;
 }
 
 #boucbookImg {
@@ -224,6 +226,9 @@ nav button:hover .buttonText {
     .box {
         background: linear-gradient(180deg, var(--globalColor) 0%, rgba(255, 255, 255, 0) 100%);
         width: 100%;
+    }
+    .story {
+        flex-direction: column;
     }
     #jamImgs {
         display: flex;

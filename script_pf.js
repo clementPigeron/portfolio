@@ -21,10 +21,10 @@ navLinks.forEach(
     }
 )
 
-const viewer = document.querySelector('#caliperModel');
+const viewer = document.querySelectorAll('.caliperModel');
 
-const minAngle = -90;
-const maxAngle = 90;
+const minAngle = -100;
+const maxAngle = 100;
 
 document.body.addEventListener('scroll', () => {
     console.log("scroll")
@@ -35,14 +35,16 @@ document.body.addEventListener('scroll', () => {
 
     const angleY = minAngle + scrollRatio * (maxAngle - minAngle);
 
-    const currentOrbit = viewer.getCameraOrbit();
+    viewer.forEach((view) => {
+        const currentOrbit = view.getCameraOrbit();
 
-    const theta = angleY * Math.PI / 180;
-    const phi = currentOrbit.phi;
-    const radius = currentOrbit.radius;
+        const theta = angleY * Math.PI / 180;
+        const phi = currentOrbit.phi;
+        const radius = currentOrbit.radius;
 
-    viewer.cameraOrbit = `${theta}rad ${phi}rad ${radius}m`;
-    viewer.jumpCameraToGoal();
+        view.cameraOrbit = `${theta}rad ${phi}rad ${radius}m`;
+        view.jumpCameraToGoal();
+    })
 });
 
 function displayBox(boxName) {
