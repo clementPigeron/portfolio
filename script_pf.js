@@ -23,8 +23,8 @@ navLinks.forEach(
 
 const viewer = document.querySelectorAll('.caliperModel');
 
-const minAngle = -100;
-const maxAngle = 100;
+const minAngle = -200;
+const maxAngle = 30;
 
 document.body.addEventListener('scroll', () => {
     console.log("scroll")

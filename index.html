@@ -30,18 +30,14 @@
             <div id="boxContainer" style="display: flex;">
                 <div class="box" id="boxProfil" style="display:block">
                     <img src="./pictures/PP_rt.jpg" id="ppImg">
-                    <p>
-                        Mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais
-                        désormais appliquer au domaine du développement web, afin de concevoir une navigation moderne et
-                        ergonomique pour optimiser l'expérience utilisateur.
                     <ul>
                         <li>Disponible pour une prise de poste en apprentissage à partir de septembre (possible dès
                             juin)
                         </li>
                         <li>Rythme d'alternance : 3 semaines en entreprise / 1 semaine en formation en moyenne</li>
                     </ul>
-                    </p>
                     <p id="titleDev"><span>Pourquoi développeur full stack ?</span></p>
+                    <p id="subDev">Ex-ingénieur mécanique, j'ai décidé de me lancer dans le développement web. Mais pourquoi ?</p>
                     <div class="story" id="experienceUtilisateur">
                         <model-viewer 
                         class="caliperModel" 
@@ -54,8 +50,22 @@
                         <p>Le design, et plus généralement l'aspect visuel d'une création, compte beaucoup pour moi. Il influence directement l'expérience qu'on en a. Pour qu'un produit ou un site web soit vraiment efficace, il faut que l'apparence soit aussi soignée que le fonctionnement.</p>
                         <model-viewer 
                         class="caliperModel" 
-                        id="paint"
+                        id="paint" field-of-view="30deg"
+                        camera-orbit="0deg 75deg 1m"
+                        min-camera-orbit="auto auto 0.5m"
+                        max-camera-orbit="auto auto 2m"
+                        disable-zoom
                         src="./models/paintSpill.glb" ar ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
+                    </div>
+                    <div class="story" id="prog">
+                        <model-viewer 
+                        class="caliperModel" 
+                        id="htmlModel"
+                        src="./models/html2.glb" ar ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
+                        <p>J'ai toujours aimé résoudre des problèmes et des énigmes. C'est ce qui m'a naturellement conduit vers l'ingénierie mécanique. Mais au fond, la programmation m'a toujours attiré. J'ai finalement décidé de m'écouter pleinement et de me lancer pour de bon.</p>
+                    </div>
+                    <div class="story">
+                        <p>En résumé, mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais désormais appliquer au domaine du développement web, afin de concevoir une navigation moderne et ergonomique pour optimiser l'expérience utilisateur.</p>
                     </div>
                 </div>
                 <div class="box" id="boxBoucbook" style="display:none">

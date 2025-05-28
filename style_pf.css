@@ -136,6 +136,7 @@ nav button:hover .buttonText {
 #boxProfil {
     font-size: larger;
     line-height: 2;
+    padding: 20px;
 }
 
 #ppImg {
@@ -154,6 +155,7 @@ nav button:hover .buttonText {
     font-weight: 500;
     font-size: 50px;
     z-index: 1;
+    margin-top: 100px;
 }
 
 #titleDev::before {
@@ -174,6 +176,12 @@ nav button:hover .buttonText {
     z-index: 1;
 }
 
+#subDev {
+    padding-top: 40px;
+    padding-bottom: 40px;
+    text-align: center;
+}
+
 .caliperModel {
     display: block;
     width: 300px;
@@ -185,6 +193,10 @@ nav button:hover .buttonText {
     margin-left: 15px;
 }
 
+#htmlModel {
+    margin-right: 15px;
+}
+
 .story {
     display: flex;
     align-items: center;
@@ -192,6 +204,7 @@ nav button:hover .buttonText {
 
 .story p {
     text-align: center;
+    padding: 30px;
 }
 
 #boucbookImg {
@@ -255,6 +268,9 @@ nav button:hover .buttonText {
     }
     .story {
         flex-direction: column;
+    }
+    .story p {
+        padding: 0;
     }
     #design {
         flex-direction: column-reverse;
