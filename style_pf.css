@@ -312,9 +312,12 @@ nav button:hover .buttonText {
         display: flex;
         width: 100%;
     }
+    #Name {
+        padding: 10px;
+    }
     #accueilContent {
         flex-direction: column;
-        padding: 20px 0 0 0;
+        padding: 20px 10px 0 0;
     }
     #ppImg {
         width: 70vw;
