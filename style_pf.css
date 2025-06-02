@@ -167,20 +167,22 @@ nav button:hover .buttonText {
     overflow: hidden;
 }
 
-#infoAlternance {
-    padding-top: 2em;
-    margin-left: 5%;
-    line-height: 2em;
+#accueilText {
+    width: 100%;
+    text-align: center;
 }
 
-#infoAlternance li {
-    margin-bottom: 1em;
+#infoAlternance {
+    padding-top: 3em;
+    margin-left: 5%;
+    line-height: 2.5em;
 }
 
 #boxProfil {
     line-height: 2;
     padding: 20px;
 }
+
 #titleDev {
     text-align: center;
     position: relative;
@@ -227,6 +229,35 @@ nav button:hover .buttonText {
 
 #htmlModel {
     margin-right: 15px;
+}
+
+#cvContainer {
+    width: 800px;
+    position: relative;
+    text-align: center;
+}
+
+#cvContainer span {
+    position: relative;
+    z-index: 1;
+}
+
+#cvImg {
+   height: 200px;
+   position: relative;
+}
+
+#cvContainer::before {
+    content: "";
+    background:linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4));
+    height: 300px;
+    width: 300px;
+    border-radius: 50%;
+    left: 50%;
+    top: 50%;
+    position: absolute;
+    z-index: 0;
+    transform: translate(-50%, -50%);
 }
 
 .story {
@@ -336,7 +367,7 @@ nav button:hover .buttonText {
     .story p {
         padding: 0;
     }
-    #design {
+    #design, #conclusion {
         flex-direction: column-reverse;
     }
     #jamImgs {
