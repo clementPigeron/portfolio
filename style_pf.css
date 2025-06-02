@@ -350,6 +350,9 @@ nav button:hover .buttonText {
         flex-direction: column;
         padding: 20px 10px 0 0;
     }
+    #infoAlternance {
+        padding-top: 1em;
+    }
     #ppImg {
         width: 70vw;
         height: 70vw;
