@@ -6,7 +6,7 @@ const nav = document.querySelector("nav")
 const navLinks = document.querySelectorAll("nav button")
 // const iframeLink = document.getElementById("iframeLink")
 // const iframeCalc = document.getElementById("iframeCalc")
-let previousBoxName = "Profil"
+let previousBoxName = "Accueil"
 
 // iframeLink.addEventListener("click", () => {
 //     toggleVisibility(iframeCalc)
@@ -48,11 +48,6 @@ document.body.addEventListener('scroll', () => {
 });
 
 function displayBox(boxName) {
-    const boxContainer = document.getElementById("boxContainer")
-
-    if (boxContainer.style.display==="none") {
-        boxContainer.style.display = "flex"
-    }
 
     if (previousBoxName) {
         let previousBox = document.getElementById(`box${previousBoxName}`)

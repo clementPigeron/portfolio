@@ -14,11 +14,8 @@
 
 <body>
     <header>
-        <div id="Name">
-            <h1>Clément Pigeron</h1>
-            <h2>Développeur full stack</h2>
-        </div>
         <nav>
+                <button id="buttonAccueil"><span class="buttonText">Accueil</span></button>
                 <button id="buttonProfil"><span class="buttonText">Profil</span></button>
                 <button id="buttonBoucbook"><span class="buttonText">BoucBook</span></button>
                 <button id="buttonTodo"><span class="buttonText">TODO List</span></button>
@@ -29,121 +26,131 @@
     </header>
     <main>
         <div class="container">
-            <div id="boxContainer" style="display: flex;">
-                <div class="box" id="boxProfil" style="display:block">
-                    <img src="./pictures/PP_rt.jpg" id="ppImg">
-                    <ul id="infoAlternance">
-                        <li>Disponible pour une prise de poste en apprentissage à partir de septembre (possible dès
-                            juin)
-                        </li>
-                        <li>Rythme d'alternance : 3 semaines en entreprise / 1 semaine en formation en moyenne</li>
-                    </ul>
-                    <p id="titleDev"><span>Pourquoi développeur full stack ?</span></p>
-                    <p id="subDev">Ex-ingénieur mécanique, j'ai décidé de me lancer dans le développement web. Mais pourquoi ?</p>
-                    <div class="story" id="experienceUtilisateur">
-                        <model-viewer 
-                        class="caliperModel" 
-                        src="./models/edim2.glb"
-                        tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
-                        </script>
-                        <p>Depuis ma formation d'ingénieur en ergonomie, design et mécanique, l'utilisateur final a toujours été au centre de mes projets. Que ce soit en conception de produit ou désormais en développement web, je souhaite la même chose : proposer des expériences simples, fluides et confortables.</p>
+            <div class="box" id="boxAccueil" style="display:block">
+                <div id="accueilContent">
+                    <div id="ppContainer">
+                        <img src="./pictures/PP2.jpg" id="ppImg">
                     </div>
-                    <div class="story" id="design">
-                        <p>Le design, et plus généralement l'aspect visuel d'une création, compte beaucoup pour moi. Il influence directement l'expérience qu'on en a. Pour qu'un produit ou un site web soit vraiment efficace, il faut que l'apparence soit aussi soignée que le fonctionnement.</p>
-                        <model-viewer 
-                        class="caliperModel" 
-                        id="paint" field-of-view="30deg"
-                        camera-orbit="0deg 75deg 1m"
-                        min-camera-orbit="auto auto 0.5m"
-                        max-camera-orbit="auto auto 2m"
-                        disable-zoom
-                        src="./models/paintCan_sub.glb" 
-                        tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
-                    </div>
-                    <div class="story" id="prog">
-                        <model-viewer 
-                        class="caliperModel" 
-                        id="htmlModel"
-                        src="./models/html2.glb" 
-                        tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
-                        <p>J'ai toujours aimé résoudre des problèmes et des énigmes. C'est ce qui m'a naturellement conduit vers l'ingénierie mécanique. Mais au fond, la programmation m'a toujours attiré. J'ai finalement décidé de m'écouter pleinement et de me lancer pour de bon.</p>
-                    </div>
-                    <div class="story">
-                        <p class="lastP">En résumé, mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais désormais appliquer au domaine du développement web, afin de concevoir une navigation moderne et ergonomique pour optimiser l'expérience utilisateur.</p>
+                    <div id="accueilText">
+                        <div id="Name">
+                            <h1>Clément Pigeron</h1>
+                            <h2>Développeur full stack</h2>
+                        </div>
+                        <ul id="infoAlternance">
+                            <li>Disponible pour une prise de poste en apprentissage à partir de septembre (possible dès
+                                juin)
+                            </li>
+                            <li>Rythme d'alternance : 3 semaines en entreprise / 1 semaine en formation en moyenne</li>
+                        </ul>
                     </div>
                 </div>
-                <div class="box" id="boxBoucbook" style="display:none">
-                    <img src="./pictures/boucbook_title.png" id="boucbookImg">
-                    <p>
-                        <a href="https://clementpigeron.github.io/booking/" target="_blank">BoucBook</a> est mon faux
-                        site de
-                        réservation de gîtes.<br><br>
-                        Notions importantes :
-                    </p>
-                    <ul>
-                        <li>Version mobile</li>
-                        <li>Grid responsive</li>
-                        <li>Animations</li>
-                        <li>Filtres</li>
-                        <li>Boutons</li>
-                    </ul>
-                    <p>En chantier : <i>ajouter du contenu</i></p>
+            </div>
+            <div class="box" id="boxProfil" style="display:none">
+                <p id="titleDev"><span>Pourquoi développeur full stack ?</span></p>
+                <p id="subDev">Ex-ingénieur mécanique, j'ai décidé de me lancer dans le développement web. Mais pourquoi ?</p>
+                <div class="story" id="experienceUtilisateur">
+                    <model-viewer 
+                    class="caliperModel" 
+                    src="./models/edim2.glb"
+                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
+                    </script>
+                    <p>Depuis ma formation d'ingénieur en ergonomie, design et mécanique, l'utilisateur final a toujours été au centre de mes projets. Que ce soit en conception de produit ou désormais en développement web, je souhaite la même chose : proposer des expériences simples, fluides et confortables.</p>
                 </div>
-                <div class="box" id="boxTodo" style="display:none">
-                    <h2>TODO List</h2>
-                    <p>
-                        <a href="https://clementpigeron.github.io/todo/" target="_blank">Une application</a> permettant
-                        de
-                        créer un nombre illimité de tâches et de rattacher une note personnalisées à chacune.<br><br>
-                        Notions importantes :
-                    </p>
-                    <ul>
-                        <li>Boutons</li>
-                        <li>Liste ordonnée</li>
-                        <li>Zones de texte</li>
-                        <li>Grid</li>
-                    </ul>
-                    <p>En chantier : <i>persistance des données, version mobile responsive</i></p>
+                <div class="story" id="design">
+                    <p>Le design, et plus généralement l'aspect visuel d'une création, compte beaucoup pour moi. Il influence directement l'expérience qu'on en a. Pour qu'un produit ou un site web soit vraiment efficace, il faut que l'apparence soit aussi soignée que le fonctionnement.</p>
+                    <model-viewer 
+                    class="caliperModel" 
+                    id="paint" field-of-view="30deg"
+                    camera-orbit="0deg 75deg 1m"
+                    min-camera-orbit="auto auto 0.5m"
+                    max-camera-orbit="auto auto 2m"
+                    disable-zoom
+                    src="./models/paintCan_sub.glb" 
+                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
                 </div>
-                <div class="box" id="boxCalculator" style="display:none">
-                    <h2>Calculatrice</h2>
-                    <p>
-                        <a href="https://clementpigeron.github.io/calculator/" target="_blank">Une application</a>
-                        contenant
-                        une calculatrice basique avec la possibilité de changer de thème graphique.<br><br>
-                        Notions importantes :
-                    </p>
-                    <ul>
-                        <li>Version mobile</li>
-                        <li>Boutons</li>
-                        <li>Calculs</li>
-                        <li>Manipulations CSS</li>
-                    </ul>
-                    <p>En chantier : <i>ajout de thèmes (palette dynamique ?), calculs plus complexes</i></p>
-                    <!-- <p><a id="iframeLink"><i>aperçu</i></a></p>
-                <iframe id="iframeCalc" src="https://clementpigeron.github.io/calculator/"
-                    style="display: none;"></iframe> -->
+                <div class="story" id="prog">
+                    <model-viewer 
+                    class="caliperModel" 
+                    id="htmlModel"
+                    src="./models/html2.glb" 
+                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="0"> </model-viewer>
+                    <p>J'ai toujours aimé résoudre des problèmes et des énigmes. C'est ce qui m'a naturellement conduit vers l'ingénierie mécanique. Mais au fond, la programmation m'a toujours attiré. J'ai finalement décidé de m'écouter pleinement et de me lancer pour de bon.</p>
                 </div>
-                <div class="box" id="boxLoisirs" style="display:none">
-                    <h2>Loisirs</h2>
-                    <p>GAME JAM : <a href="https://itch.io/jam/boss-rush-jam-2025" target="_blank">Boss Rush Jam
-                            2025</a>
-                    </p>
-                    <p>Graphismes réalisés pour le jeu <a href="https://pigm0.itch.io/clock-is-spinning"
-                            target="_blank">clock is
-                            spinning</a> sous le pseudonyme "Soul".</p>
-                    <p id="jamImgs"><img src="./pictures/GJ1_carrot_OL_big.gif" class="imgjam"><img
-                            src="./pictures/GJ1_glasses_big.gif" class="imgjam"><img src="./pictures/GJ1_printer.gif"
-                            class="imgjam"></p>
+                <div class="story">
+                    <p class="lastP">En résumé, mon parcours d'ingénieur m'a permis de développer une créativité et une rigueur que j'aimerais désormais appliquer au domaine du développement web, afin de concevoir une navigation moderne et ergonomique pour optimiser l'expérience utilisateur.</p>
                 </div>
-                <div class="box" id="boxTests3d" style="display:none">
-                    <p>Contenu boîte 5</p>
-                    <model-viewer src="./models/Donut_clement_test.glb" ar camera-controls
-                        ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp"
-                        shadow-intensity="0" autoplay> </model-viewer>
-                    <model-viewer src="./models/Donut.glb" ar ar-modes="webxr scene-viewer quick-look"
-                        tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" autoplay> </model-viewer>
-                </div>
+            </div>
+            <div class="box" id="boxBoucbook" style="display:none">
+                <img src="./pictures/boucbook_title.png" id="boucbookImg">
+                <p>
+                    <a href="https://clementpigeron.github.io/booking/" target="_blank">BoucBook</a> est mon faux
+                    site de
+                    réservation de gîtes.<br><br>
+                    Notions importantes :
+                </p>
+                <ul>
+                    <li>Version mobile</li>
+                    <li>Grid responsive</li>
+                    <li>Animations</li>
+                    <li>Filtres</li>
+                    <li>Boutons</li>
+                </ul>
+                <p>En chantier : <i>ajouter du contenu</i></p>
+            </div>
+            <div class="box" id="boxTodo" style="display:none">
+                <h2>TODO List</h2>
+                <p>
+                    <a href="https://clementpigeron.github.io/todo/" target="_blank">Une application</a> permettant
+                    de
+                    créer un nombre illimité de tâches et de rattacher une note personnalisées à chacune.<br><br>
+                    Notions importantes :
+                </p>
+                <ul>
+                    <li>Boutons</li>
+                    <li>Liste ordonnée</li>
+                    <li>Zones de texte</li>
+                    <li>Grid</li>
+                </ul>
+                <p>En chantier : <i>persistance des données, version mobile responsive</i></p>
+            </div>
+            <div class="box" id="boxCalculator" style="display:none">
+                <h2>Calculatrice</h2>
+                <p>
+                    <a href="https://clementpigeron.github.io/calculator/" target="_blank">Une application</a>
+                    contenant
+                    une calculatrice basique avec la possibilité de changer de thème graphique.<br><br>
+                    Notions importantes :
+                </p>
+                <ul>
+                    <li>Version mobile</li>
+                    <li>Boutons</li>
+                    <li>Calculs</li>
+                    <li>Manipulations CSS</li>
+                </ul>
+                <p>En chantier : <i>ajout de thèmes (palette dynamique ?), calculs plus complexes</i></p>
+                <!-- <p><a id="iframeLink"><i>aperçu</i></a></p>
+            <iframe id="iframeCalc" src="https://clementpigeron.github.io/calculator/"
+                style="display: none;"></iframe> -->
+            </div>
+            <div class="box" id="boxLoisirs" style="display:none">
+                <h2>Loisirs</h2>
+                <p>GAME JAM : <a href="https://itch.io/jam/boss-rush-jam-2025" target="_blank">Boss Rush Jam
+                        2025</a>
+                </p>
+                <p>Graphismes réalisés pour le jeu <a href="https://pigm0.itch.io/clock-is-spinning"
+                        target="_blank">clock is
+                        spinning</a> sous le pseudonyme "Soul".</p>
+                <p id="jamImgs"><img src="./pictures/GJ1_carrot_OL_big.gif" class="imgjam"><img
+                        src="./pictures/GJ1_glasses_big.gif" class="imgjam"><img src="./pictures/GJ1_printer.gif"
+                        class="imgjam"></p>
+            </div>
+            <div class="box" id="boxTests3d" style="display:none">
+                <p>Contenu boîte 5</p>
+                <model-viewer src="./models/Donut_clement_test.glb" ar camera-controls
+                    ar-modes="webxr scene-viewer quick-look" tone-mapping="neutral" poster="poster.webp"
+                    shadow-intensity="0" autoplay> </model-viewer>
+                <model-viewer src="./models/Donut.glb" ar ar-modes="webxr scene-viewer quick-look"
+                    tone-mapping="neutral" poster="poster.webp" shadow-intensity="0" autoplay> </model-viewer>
             </div>
         </div>
     </main>

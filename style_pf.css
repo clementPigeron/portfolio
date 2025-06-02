@@ -7,6 +7,7 @@
 
 html {
     overflow: auto;
+    font-size: 20px;
 }
 
 html, body {
@@ -45,18 +46,6 @@ h1 {
     margin-bottom: 3%;
 }
 
-#Name h1,h2 {
-    margin-bottom: 5px;
-    font-family: "Parkinsans", sans-serif;
-    text-align: center;
-    color: var(--font-color);
-}
-
-header h2 {
-    margin-top: 0;
-    font-weight: lighter;
-}
-
 .container {
     display: flex;
     overflow: hidden;
@@ -73,6 +62,7 @@ nav {
     text-align: center;
     display: flex;
     flex-direction: row;
+    margin-bottom: 10px;
     /* background: var(--globalColor); */
 }
 nav * {
@@ -110,7 +100,7 @@ nav button:not(:first-child)::after {
 }
 
 nav button:hover .buttonText {
-    transform: translateY(10px);
+    transform: translateY(5px);
 }
 
 #boxContainer {
@@ -120,9 +110,10 @@ nav button:hover .buttonText {
 
 .box {
     display: block;
+    width: 100%;
     position: absolute;
     border-radius: 20px;
-    padding: 10px;
+    padding: 30px;
     box-sizing: border-box;
     opacity: 1;
     color: var(--font-color);
@@ -135,26 +126,61 @@ nav button:hover .buttonText {
     animation-duration: 0.5s;
 }
 
-#boxProfil {
-    font-size: larger;
-    line-height: 2;
-    padding: 20px;
+#accueilContent {
+    padding-top: 20vh;
+    padding-left: 5vh;
+    display: flex;
+    flex-direction: row;
+}
+
+#Name h1,h2 {
+    margin-bottom: 5px;
+    font-family: "Parkinsans", sans-serif;
+    text-align: center;
+    color: var(--font-color);
+}
+
+#Name h1 {
+    font-size: 3.5em;
+    font-weight: 500;
+    margin-top: 0;
+}
+
+#Name h2 {
+    font-size: 2em;
+    margin-top: 0;
+    font-weight: lighter;
+}
+
+#boxAccueil {
+    padding: 0;
 }
 
 #ppImg {
-    width: 150px;
-    height: 150px;
+    width: 400px;
+    height: 400px;
     object-fit: cover;
     border-radius: 50%;
-    object-position: left 15%;
-    display: block;
+    object-position: left 25%;
+    display: inline-block;
     margin: auto;
+    overflow: hidden;
 }
 
 #infoAlternance {
+    padding-top: 2em;
     margin-left: 5%;
+    line-height: 2em;
 }
 
+#infoAlternance li {
+    margin-bottom: 1em;
+}
+
+#boxProfil {
+    line-height: 2;
+    padding: 20px;
+}
 #titleDev {
     text-align: center;
     position: relative;
@@ -267,16 +293,16 @@ nav button:hover .buttonText {
         flex-direction: column;
     }
     nav button:not(:last-child)::after {
-    content: "";
-    position: absolute;
-    left: 0;
-    bottom: 0;
-    width: 100%;
-    height: 2px;
-    background-color: var(--lineColor);
+        content: "";
+        position: absolute;
+        left: 0;
+        bottom: 0;
+        width: 100%;
+        height: 2px;
+        background-color: var(--lineColor);
     }
     nav button:last-child::after {
-    display: none;
+        display: none;
     }
     .container {
         flex-direction: column;
@@ -285,6 +311,17 @@ nav button:hover .buttonText {
     #boxContainer {
         display: flex;
         width: 100%;
+    }
+    #accueilContent {
+        flex-direction: column;
+        padding: 20px 0 0 0;
+    }
+    #ppImg {
+        width: 70vw;
+        height: 70vw;
+    }
+    #ppContainer {
+        text-align: center;
     }
     .box {
         background: linear-gradient(180deg, var(--globalColor) 0%, rgba(255, 255, 255, 0) 100%);
