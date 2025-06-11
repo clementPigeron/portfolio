@@ -271,6 +271,22 @@ nav button:hover .buttonText {
     z-index: 1;
 }
 
+#projectsGrid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.project {
+    margin: 20px;
+    padding: 20px;
+    border-radius: 20px;
+    background:linear-gradient(rgba(255, 255, 255, 0.4), rgba(255, 255, 255, 0.4))
+}
+
+.projectTitle {
+    margin-top: 0px;
+}
+
 #boucbookImg {
     height: 80px;
     display: block;
@@ -287,6 +303,10 @@ nav button:hover .buttonText {
     color: violet
 }
 
+#boxLoisirs {
+    line-height: 2;
+}
+
 .imgjam {
     transition: all 0.8s ease;
 }
@@ -295,6 +315,17 @@ nav button:hover .buttonText {
     transform: scale(2, 2);
     background-color: rgba(255, 255, 255, 0.475);
     border-radius: 20px;
+}
+
+#imgCinema {
+    width: 400px;
+    height: 400px;
+    display: inline-block;
+    margin-top: 30px;
+    margin-bottom: 30px;
+    object-fit: cover;
+    border-radius: 50%;
+    overflow: hidden;
 }
 
 @keyframes boxTranslate {
@@ -371,6 +402,12 @@ nav button:hover .buttonText {
     }
     #design, #conclusion {
         flex-direction: column-reverse;
+    }
+    #boxProjects {
+        padding: 30px 15px 30px 15px;
+    }
+    #projectsGrid {
+        grid-template-columns: 1fr;
     }
     #jamImgs {
         display: flex;
