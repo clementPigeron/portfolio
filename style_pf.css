@@ -321,11 +321,18 @@ nav button:hover .buttonText {
     width: 400px;
     height: 400px;
     display: inline-block;
-    margin-top: 30px;
-    margin-bottom: 30px;
     object-fit: cover;
     border-radius: 50%;
     overflow: hidden;
+}
+
+figure {
+    text-align: center;
+}
+
+figcaption {
+    font-style: italic;
+    font-size: smaller;
 }
 
 @keyframes boxTranslate {
