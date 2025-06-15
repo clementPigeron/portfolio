@@ -180,6 +180,7 @@ nav button:hover .buttonText {
 #boxProfil {
     line-height: 2;
     padding: 20px;
+    overflow: hidden;
 }
 
 #titleDev {
